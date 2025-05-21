@@ -215,12 +215,44 @@ section h2 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.hover-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(270deg, rgb(17, 0, 250), rgb(0, 106, 255), rgb(0, 75, 128), rgb(0, 8, 255));
+  background-size: 600% 600%;
+  animation: discoGradient 5s ease infinite;
+
+  color: white;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  display: none;
+  pointer-events: none;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Show on hover */
+.project-card:hover .hover-overlay {
+  display: block;
+}
+
+/* Disco animation keyframes */
+@keyframes discoGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 .project-card:hover{
     background-color: rgb(240, 240, 245);
 }
 
-.project-card::after{
+.project1-card::after{
     content: "Click to expand"; /* Tooltip text */
     position: absolute;
     top: 100%; /* Position below the card */

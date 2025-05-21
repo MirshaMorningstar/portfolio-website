@@ -1,0 +1,9 @@
+git clone https://github.com/MirshaMorningstar/friendly-chat-bubbles-say.git
+cd assisting-code-mate
+
+git remote remove origin
+
+git remote add origin https://github.com/MirshaMorningstar/happy-welcome-script.git
+
+
+git push --force origin main
